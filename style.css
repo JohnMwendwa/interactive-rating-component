@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Primary */
+  --orange: 25, 97%, 53%;
+
+  /* Neutral */
+  --white: 0, 0%, 100%;
+  --light-grey: 217, 12%, 63%;
+  --medium-grey: 216, 12%, 54%;
+  --dark-blue: 213, 19%, 18%;
+  --very-dark-blue: 216, 12%, 8%;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  font-family: "Overpass", sans-serif;
+  font-size: 0.9375rem;
+  background-color: hsl(var(--very-dark-blue));
+}
+
+.card {
+  background-color: hsl(var(--dark-blue));
+  max-width: 25rem;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card__icon {
+  display: grid;
+  place-content: center;
+  background-color: hsla(var(--medium-grey), 0.1);
+  width: 2.5rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+h1,
+h2 {
+  color: hsl(var(--white));
+  margin-bottom: 1rem;
+}
+
+p {
+  color: hsl(var(--light-grey));
+  line-height: 1.5;
+}
+
+button {
+  border-radius: 100vw;
+  padding: 1rem;
+  background-color: hsl(var(--orange));
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  font-weight: 700;
+  width: 100%;
+  color: hsl(var(--white));
+  border: transparent;
+  cursor: pointer;
+}
+
+button:hover {
+  color: hsl(var(--orange));
+  background-color: hsl(var(--white));
+}
+
+/* Form styles */
+
+.card__ratings {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.card__rates {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__rates > label {
+  background-color: hsla(var(--light-grey), 0.1);
+  color: hsl(var(--light-grey));
+  display: grid;
+  place-content: center;
+  width: 3rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.card__rates > label:hover {
+  background-color: hsla(var(--orange));
+  font-weight: 700;
+  color: hsl(var(--white));
+}
+
+.card__rates > label:has(input:checked) {
+  background-color: hsl(var(--medium-grey));
+  font-weight: 700;
+  color: hsl(var(--white));
+}
+
+.card__rates input {
+  display: none;
+}
+
+.thanks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: none;
+}
+
+.card__rating p {
+  border-radius: 100vw;
+  padding: 0.5rem 1.5rem;
+  width: fit-content;
+  background-color: hsla(var(--light-grey), 0.1);
+  color: hsla(var(--orange), 0.7);
+}
