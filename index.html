@@ -37,24 +37,32 @@
             feedback is appreciated to help us improve our offering!
           </p>
         </div>
-        <div class="card__choices">
-          <div>
-            <p>1</p>
+        <form class="card__ratings">
+          <div class="card__rates">
+            <label for="rating__1">
+              <input type="radio" name="rating" id="rating__1" value="1" />
+              1
+            </label>
+            <label for="rating__2">
+              <input type="radio" name="rating" id="rating__2" value="2" />
+              2
+            </label>
+            <label for="rating__3">
+              <input type="radio" name="rating" id="rating__3" value="3" />
+              3
+            </label>
+            <label for="rating__4">
+              <input type="radio" name="rating" id="rating__4" value="4" />
+              4
+            </label>
+            <label for="rating__5">
+              <input type="radio" name="rating" id="rating__5" value="5" />
+              5
+            </label>
           </div>
-          <div>
-            <p>2</p>
-          </div>
-          <div>
-            <p>3</p>
-          </div>
-          <div>
-            <p>4</p>
-          </div>
-          <div>
-            <p>5</p>
-          </div>
-        </div>
-        <button>Submit</button>
+
+          <button type="submit">Submit</button>
+        </form>
       </div>
       <!-- Rating state end -->
 
@@ -64,7 +72,7 @@
           <img src="images/illustration-thank-you.svg" alt="thanks image" />
         </div>
         <div class="card__rating">
-          <p>You selected <output class="rating"></output> out of 5</p>
+          <p>You selected <output id="rating__score"></output> out of 5</p>
         </div>
         <div class="card__text">
           <h2>Thank you!</h2>
@@ -76,5 +84,8 @@
       </div>
       <!-- Thank you state end -->
     </main>
+
+    <!-- Javascript file -->
+    <script src="app.js"></script>
   </body>
 </html>
