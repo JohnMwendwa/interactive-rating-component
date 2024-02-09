@@ -23,6 +23,7 @@ body {
   font-family: "Overpass", sans-serif;
   font-size: 0.9375rem;
   background-color: hsl(var(--very-dark-blue));
+  padding: 5rem 1rem;
 }
 
 .card {
@@ -33,6 +34,8 @@ body {
   flex-direction: column;
   gap: 2rem;
   padding: 2rem;
+  transition: all 1s;
+  animation: wobble 2s;
 }
 
 .card__icon {
@@ -86,6 +89,7 @@ button:hover {
 }
 
 .card__rates > label {
+  animation: wobble 2s;
   background-color: hsla(var(--light-grey), 0.1);
   color: hsl(var(--light-grey));
   display: grid;
@@ -122,9 +126,34 @@ button:hover {
 }
 
 .card__rating p {
+  animation: wobble 2s;
   border-radius: 100vw;
   padding: 0.5rem 1.5rem;
   width: fit-content;
   background-color: hsla(var(--light-grey), 0.1);
   color: hsla(var(--orange), 0.7);
+}
+
+@keyframes wobble {
+  0% {
+    transform: translateX(0%);
+  }
+  15% {
+    transform: translateX(-25%) rotate(-5deg);
+  }
+  30% {
+    transform: translateX(20%) rotate(3deg);
+  }
+  45% {
+    transform: translateX(-15%) rotate(-3deg);
+  }
+  60% {
+    transform: translateX(10%) rotate(2deg);
+  }
+  75% {
+    transform: translateX(-5%) rotate(-1deg);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
